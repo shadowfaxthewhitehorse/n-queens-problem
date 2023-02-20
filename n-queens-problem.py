@@ -64,12 +64,20 @@ def print_board(board: List[List[bool]]):
 
 # DEVNOTES
 #
+# In this program, we first create a two-dimensional list board to represent the chessboard. We use False to represent empty cells and True to represent 
+# cells that have a queen. We then define the solve_n_queens function that initializes an empty list solutions and calls the helper function 
+# solve_n_queens_helper() with the initial parameters board, 0, and solutions. The solve_n_queens_helper function uses backtracking to try placing a queen 
+# in each row of the current column. If a queen can be placed in a particular row without violating any of the constraints, we mark the cell as occupied, 
+# move on to the next column, and call solve_n_queens_helper recursively with the updated board and solutions parameters. 
 # 
-    
+# The program returns the filled out board with the n queens placed in the appropriate positions.
+#
 # Test the program with a 4x4 board
-solutions = solve_n_queens(4)
+
+my_num = input("Enter the number of queens n:")
+solutions = solve_n_queens(my_num)
 for solution in solutions:
-    board = [[False] * 4 for _ in range(4)]
+    board = [[False] * my_num for _ in range(my_num)]
     for pos in solution:
         board[pos[0]][pos[1]] = True
     print_board(board)
