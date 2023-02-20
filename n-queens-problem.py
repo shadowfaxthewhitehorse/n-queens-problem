@@ -1,5 +1,12 @@
 from typing import List
 
+#
+# PROBLEM
+# A program in Python to solve the n-queens problem. 
+# You have to place n queens so that they cannot capture each other either through a queen move or a knight move.
+# That is, you have to place n queens on a nxn chessboard so that no queen can capture another queen. In addition, 
+# no queen should be able to capture another queen via a knight move, that is, a move in the shape of an L.
+# 
 def solve_n_queens(n: int) -> List[List[int]]:
     board = [[False] * n for _ in range(n)]
     solutions = []
@@ -71,6 +78,13 @@ def print_board(board: List[List[bool]]):
 # move on to the next column, and call solve_n_queens_helper recursively with the updated board and solutions parameters. 
 # 
 # The program returns the filled out board with the n queens placed in the appropriate positions.
+#
+# PROBLEM STATEMENT
+# 
+# solve the n queens problem with the additional constraint that 
+# queens can also move like knights, and so one must make sure that
+# no queen can capture another queen using a knight move.
+
 #
 # Test the program with a 4x4 board
 
