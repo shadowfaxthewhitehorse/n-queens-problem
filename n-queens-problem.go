@@ -9,6 +9,14 @@ type position struct {
 	row, col int
 }
 //
+//
+// PROBLEM STATEMENT
+// 
+// solve the n queens problem with the additional constraint that 
+// queens can also move like knights, and so one must make sure that
+// no queen can capture another queen using a knight move.
+
+
 func solveNQueens(n int) [][]position {
 	board := make([][]bool, n)
 	for i := range board {
